@@ -1,5 +1,11 @@
 <h1 align="center">Magento 2 Message Manager Remover</h1>
 
+<p align="center">
+    <a href="https://travis-ci.org/AydinHassan/m2-message-manager-remover" title="Build Status" target="_blank">
+        <img src="https://img.shields.io/travis/AydinHassan/m2-message-manager-remover/master.svg?style=flat-square&label=Linux" />
+    </a>
+</p>
+
 <p align="center">A small utility to remove messages added to the message manager</p>
 
 ## Installation
