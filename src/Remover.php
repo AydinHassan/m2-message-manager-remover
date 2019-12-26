@@ -19,6 +19,16 @@ class Remover
         $this->messageManager = $messageManager;
     }
 
+    public function removeAll(): int
+    {
+        $removed = 0;
+        foreach ($this->messageManager->getMessages()->getItems() as $message) {
+            $this->removeMessage($message);
+            $removed++;
+        }
+        return $removed;
+    }
+
     public function removeByRegex(string $pattern): int
     {
         $matches = 0;

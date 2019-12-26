@@ -78,4 +78,18 @@ class RemoverTest extends TestCase
         self::assertEquals(2, $numRemoved);
         self::assertEquals(0, $this->messageCollection->getCount());
     }
+
+    public function testRemoveAll(): void
+    {
+        $this->messageCollection->addMessage(new Notice('First Message'));
+        $this->messageCollection->addMessage(new Notice('Second Message'));
+        $this->messageCollection->addMessage(new Notice('Third Message'));
+
+        self::assertEquals(3, $this->messageCollection->getCount());
+
+        $numRemoved = $this->remover->removeAll();
+
+        self::assertEquals(3, $numRemoved);
+        self::assertEquals(0, $this->messageCollection->getCount());
+    }
 }
