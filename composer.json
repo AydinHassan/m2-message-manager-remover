@@ -26,16 +26,22 @@
   "autoload": {
     "files": [ "registration.php" ],
     "psr-4": {
-      "TrashPanda\\MessageManagerRemover\\": ""
+      "TrashPanda\\MessageManagerRemover\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "TrashPanda\\MessageManagerRemoverTest\\": "test"
     }
   },
   "scripts": {
     "test": [
-      "@cs",
-      "phpunit"
+      "@unit-tests",
+      "@cs"
     ],
-    "cs": "phpcs src",
-    "cs-fix": "phpcbf src",
-    "coverage" : "phpunit --coverage-text"
+    "cs": "phpcs -s src --standard=PSR12 --extensions=php && phpcs -s test --standard=PSR12 --extensions=php",
+    "cs-fix": "phpcbf -s src --standard=PSR12 && phpcbf -s src --standard=PSR12",
+    "unit-tests": "phpunit --colors=always",
+    "unit-tests-coverage": "phpunit --colors=always -v --coverage-text"
   }
 }
