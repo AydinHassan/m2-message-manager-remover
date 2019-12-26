@@ -1,6 +1,6 @@
-<h1 align="center">Magento 2 OpCache Monitor</h1>
+<h1 align="center">Magento 2 Message Manager Remover</h1>
 
-<p align="center">Monitor and control PHP OpCache from the Admin </p>
+<p align="center">A small utility to remove messages added to the message manager</p>
 
 ## Installation
 
